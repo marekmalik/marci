@@ -1,0 +1,74 @@
+/* colors */
+$color1: #ccc;
+$color2: #bbb;
+$color3: #fff;
+
+.well {padding: 20px; margin-bottom: 20px; background-color: rgba(86,61,124,.15); border: 1px solid rgba(86,61,124,.2);}
+
+/* Animace skrolování myší */
+.mouse {
+	display: block;
+	margin: 0 auto;
+	width: 26px;
+	height: 46px;
+	border-radius: 13px;
+	border: 2px solid $color3;
+	position: absolute;
+    bottom: 25vh;
+    left: 50%;
+
+    span {
+		display: block;
+		margin: 6px auto;
+		width: 2px;
+		height: 6px;
+		border-radius: 4px;
+		background: $color3;
+		border: 1px solid transparent;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-name: scroll;
+		animation-name: scroll;
+	}
+}
+@-webkit-keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(12px);
+		transform: translateY(12px);
+	}
+}
+@keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(12px);
+		-ms-transform: translateY(12px);
+		transform: translateY(12px);
+	}
+}
+/* Konec - Animace skrolování myší */
+
+.hero {
+	/*background: url(https://unsplash.it/g/1920/800/?random) no-repeat center center;*/
+	background-color: $color2;
+	color: $color3;
+	height: 80vh;
+	a, a:hover {color: $color3;}
+	.btn {border-color: $color3;}
+	.btn-primary, .btn-primary:hover {border-color: $color3;}
+}
